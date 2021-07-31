@@ -1,7 +1,13 @@
 print("Collatz Conjecture")
 f = open('collatz-output.txt', 'a')
 amount = float(input('Principal Amount? '))
-f.write('\n' + str(amount) + ' ')
+
+if (amount >= 1):
+    f.write('\n' + str(amount) + ' ')
+
+else: 
+    f.write('\n' + 'UNKNOWN NUMBER')
+    exit()
 
 while amount > 1:
 
@@ -17,5 +23,6 @@ while amount > 1:
 
     else:
         print('Error')
+        f.write(' ! Error !  ')
 
 f.close
