@@ -1,7 +1,6 @@
 print("Collatz Conjecture")
 f = open('collatz-output.txt', 'a')
 amount = float(input('Principal Amount? '))
-fun = 
 
 if (amount >= 1):
     f.write('\n' + str(amount) + ' ')
@@ -32,7 +31,7 @@ if (amount == 1):
     amount += 1
 
 # set limit for amount to reach
-if (amount == 9999999999999999999999999999999999999999999):
+if (amount == 999):
     exit()
 
 f.close
