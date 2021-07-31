@@ -1,16 +1,20 @@
 print("Collatz Conjecture")
+f = open('collatz-output.txt', 'a')
 amount = float(input('Principal Amount? '))
 
 while amount > 1:
 
     if (amount % 2) != 0:
         amount = ((3 * amount) + 1)
-        print(amount)
+        # print(amount)
+        f.write(amount)
 
     elif (amount % 2) == 0:
         amount = (amount / 2)
-        print(amount)
+        # print(amount)
+        f.write(amount)
 
     else:
         print('Error')
 
+f.close
